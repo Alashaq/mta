@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '$'
+const prefix = '4'
 client.on('ready', () => {
   console.log('======================================')
   console.log(`Logged in as ${client.user.tag}!`);
@@ -81,4 +81,4 @@ if (message.content === "سبام" + "<@" + `${client.user.id}` + ">") {
 });
 
 
-client.login('NDgyMDAxNDU3Njg4NjA4Nzg4.Do5cCw.tb63yHlA0xIhmqxQbUDTA8jw5m0');
+client.login('NDk1Njc5MzkxNzg3OTA5MTIw.DpFmow.BeA8JV72wHgIlDLPvHvhb_dG4rc');
