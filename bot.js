@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ">";
+const prefix = "$";
 
 client.on('ready', () => {
      client.user.setActivity(" >help | >inv",{type: 'WATCHING'})
@@ -9,8 +9,8 @@ client.on('ready', () => {
 
 
 client.on("message", message => {
-    var prefix = ">";
- if (message.content === ">help") {
+    var prefix = "$";
+ if (message.content === "$help") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
       .setDescription(`
@@ -63,7 +63,7 @@ ${prefix}warn ⇏ لتحضير شخص ما
    
    
    client.on('message', message => {
-	       var prefix = ">";
+	       var prefix = "$";
             if (message.content.startsWith(prefix + "bot")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
@@ -185,13 +185,13 @@ client.on('message' , async (message) => {
         .setColor('RED')
         .setFooter(`====ولكم منور السيرفر اتمنا لك الاستمتاع====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('name', 'welcome')
+    var channel =member.guild.channels.find('name', 'chat')
     if (!channel) return;
     channel.send({embed : embed});
     })
 
 client.on('message', ra3d => {
-var prefix = ">";
+var prefix = "$";
                         let args = ra3d.content.split(" ").slice(1).join(" ")
 if(ra3d.content.startsWith(prefix + 'cc')) {
     if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
@@ -249,9 +249,9 @@ let welcomer = member.guild.channels.find("name","welcome");
 
 client.on('message', message =>{
     if(message.author.bot) return;
-    if(!message.content == ('>clear'))
+    if(!message.content == ('$clear'))
 if(!true) return;
-    if(message.content.split(' ')[0] == ('>clear')){
+    if(message.content.split(' ')[0] == ('$clear')){
     var lmt = message.content.split(' ')[1]
     ,  hang = 0
     ,  max  = 0;
@@ -283,7 +283,7 @@ if(!true) return;
 
 
 client.on('message', function(message) {
-	const myID = "337309575864647680";
+	const myID = "346045919072092161";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -421,7 +421,7 @@ message.channel.sendEmbed(cat);
 });
 
    client.on("message", msg => {
-           var prefix = ">";
+           var prefix = "$";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
       const embed = new Discord.RichEmbed();
@@ -474,7 +474,7 @@ client.on('message', message => {
 
 
       client.on('message', msg => { 
-        if (msg.content.startsWith(`>warn`)) {
+        if (msg.content.startsWith(`$warn`)) {
           if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
            let args = msg.content.split(" ").slice(1);
           if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
@@ -785,4 +785,4 @@ client.on('message', message => {
            }
 });
 
-client.login('NDcwMjQ0MjIwODI5OTU4MTQ1.DjUV5g.AjncR2aKcXklJOoiNuLPjHwzPF4')
+client.login(process.env.TOKEN);
