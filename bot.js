@@ -71,7 +71,7 @@ ${prefix}warn ⇏ لتحضير شخص ما
 .addField(' الاعضاء👥 ',` [${client.users.size}] `)
 .addField('الرومات📚 ',`[${client.channels.size}]`) 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`Official Team`)
+.addField('مصمم  + صاحب البوت ',`ŜuLTan ♕#0060-FiveStore`)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
