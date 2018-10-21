@@ -15,7 +15,7 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
       
-                    Official-Bot Commands
+                    KingDom of Magic Commands
 Please Choose:
 
              
